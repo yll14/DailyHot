@@ -28,6 +28,10 @@ jobs:
 
       - name: Build project
         run: pnpm run build
+        env:
+          VITE_GLOBAL_API: "https://hot.api.yll14.cn/"
+          VITE_ICP: "赣ICP备2025061952号"
+          VITE_DIR: "/"
 
       - name: Deploy to dist branch
         uses: peaceiris/actions-gh-pages@v3
